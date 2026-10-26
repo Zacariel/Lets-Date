@@ -1,0 +1,36 @@
+{
+  "Jogador": {
+    "Nome": "",
+    "Apelido": "Lucas",
+    "Idade": 0,
+    "Buscando": "",
+    "Biografia": "cara legal"
+  },
+  "ConversasDisponiveis": 3,
+  "Coragem": 50,
+  "InteresseAtualNpc": 100,
+  "TelaAtual": "Fim",
+  "NpcsJaVistos": [
+    "Kayla Schrute"
+  ],
+  "NpcAtual": null,
+  "ConversasIniciadas": 1,
+  "NpcsComEncontroMarcado": [
+    {
+      "Nome": "Kayla Schrute",
+      "Idade": 35,
+      "Biografia": "A mais de 15 anos no mesmo ramo! Busco uma pessoa descente para me relacionar e seguir a linhagem da fam\u00EDlia Schrute. Fazendas, tratores, beterrabas, e diversos outros bens para te impressionar.",
+      "VestuarioPreferido": "Cl\u00E1ssico",
+      "PresentePreferido": "Chocolates",
+      "LocalPreferido": "Restaurante",
+      "PerguntaBom": "Poucas pessoas tem tanta disciplina para seguir no mesmo ramo por tanto tempo.",
+      "RespostaBom": "Aparentemente voc\u00EA tem capacidade para observar os fatos. Outros desperdi\u00E7am seu tempo procurando um prop\u00F3sito para vida.",
+      "PerguntaRegular": "Beterrabas s\u00E3o interessantes, acho.",
+      "RespostaRegular": "Interessantes? S\u00E3o o sustento de uma linhagem inteira.",
+      "PerguntaRuim": "N\u00E3o gosto muito de fazendas, suja muito a roupa.",
+      "RespostaRuim": "Voc\u00EA n\u00E3o sobreviveria um dia no inverno rigoroso.",
+      "PerguntaPessimo": "Voc\u00EA parece meio maluca com essas coisas de beterraba.",
+      "RespostaPessimo": "Falso. Sou perfeitamente s\u00E3. Voc\u00EA que \u00E9 ignorante."
+    }
+  ]
+}

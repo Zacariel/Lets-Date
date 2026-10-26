@@ -1,0 +1,15 @@
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\obj\Debug\net9.0\JogoTextual.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\obj\Debug\net9.0\JogoTextual.AssemblyInfoInputs.cache
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\obj\Debug\net9.0\JogoTextual.AssemblyInfo.cs
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\obj\Debug\net9.0\JogoTextual.csproj.CoreCompileInputs.cache
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\bin\Debug\net9.0\JogoTextual.exe
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\bin\Debug\net9.0\JogoTextual.deps.json
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\bin\Debug\net9.0\JogoTextual.runtimeconfig.json
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\bin\Debug\net9.0\JogoTextual.dll
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\bin\Debug\net9.0\JogoTextual.pdb
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\obj\Debug\net9.0\JogoTextual.dll
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\obj\Debug\net9.0\refint\JogoTextual.dll
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\obj\Debug\net9.0\JogoTextual.pdb
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\obj\Debug\net9.0\JogoTextual.genruntimeconfig.cache
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\obj\Debug\net9.0\ref\JogoTextual.dll
+C:\Users\Proprietario\Downloads\letsdate_estrutura_inicial\src\JogoTextual\obj\Debug\net9.0\JogoText.7EA5A39E.Up2Date
