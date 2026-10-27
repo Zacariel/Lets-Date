@@ -1,0 +1,342 @@
+# M2 - Entrega Parcial
+
+
+Alunos: Kimberly Bernardo da Silva, Lucas Gonçalves, Rau Guerreiro Weiss.  
+Professor: Marcelo.  
+Disciplina: Lógica de Programação. 
+
+
+Nome do jogo: Let’s Date!
+
+*“É dia dos namorados! Mas, Infelizmente, você está sozinho, mas por pouco tempo. Com nosso novo app de encontros, o “Let’s Date!”, você terá um par até o fim do dia!”.*
+##
+
+## Resumo da proposta: 
+
+O jogo simula um aplicatvo de namoro onde o jogador pode iniciar até quatro conversas e
+convidar os NPCs para um encontro, depois sair com ele. Cada final varia dependendo da
+quantidade de encontros conseguidos pelo jogador por meio das interações até o fim do dia.  
+  
+## Objetivo do Jogador
+
+O objetvo do jogador é não passar o dia dos namorados sozinho, como sugere a propaganda do aplicativo. Por meio dos diálogos, ele deve fazer as escolhas corretas para desenvolver um nível suficiente de interesse e conseguir chamar um NPC para o encontro antes de atngir seu limites de conversas no aplicativo.
+
+## Ciclo principal do jogo:
+
+* O jogador inicia no aplicativo;
+* Ele seleciona a opção de “Buscar Encontro”;
+* Uma conversa com um NPC começa;
+* O jogador deve escolher as opções adequadas de diálogo para aumentar o nível de
+interesse do NPC;
+* Quando o nível de interesse for suficiente, ele pode chamar o NPC para um encontro;
+* O NPC pode ou não aceitar;
+* O jogador pode escolher finalizar a etapa de mensagens ou repetir a ação até quatro
+vezes antes de terminar o dia;
+* O jogador deve se arrumar para o(s) encontros;
+* Programa retorna o resultado do encontro;
+* Jogo finaliza. 
+
+## Estados e situações principais:  
+
+**Sair:** a opção “sair” permite o jogador finalizar o jogo independente de ter atingido ou não o limite de conversas. Usar esta opção antes de iniciar um diálogo leva a um final especifico.  
+  
+**Diálogo:** o jogador entra numa conversa com o NPC e pode aumentar ou diminuir seu nível de interesse por meio de opções de diálogo e flerte. Cada NPC pode ter preferências diferentes, e o jogador deve se atentar as suas biografias no aplicativo para tentar fazer as escolhas mais adequadas.  
+    
+**Compra:** opção de compra nas configurações do aplicaƟvo para ter uma conversa extra dentro do aplicativo.
+
+## Ações disponíveis para o jogador:
+
+### Login – dados solicitados na primeira interação com o aplicativo.
+
+*“Com nosso novo app de encontros, o “Let’s Date!”, você terá um par até o fim do dia!”*  
+
+\> Começar!  
+Redireciona para o menu de “informações pessoais”, na sequencia seguinte. O jogo inicia quando a última informação for preenchida.  
+  > Nome – o jogador pode adicionar qualquer sequencia de caracteres, e estará disponível sempre que ele abrir a opção de Configurações no Menu Inicial, mas não pode ser alterado.   
+
+  > Apelido – esta informação também pode ser composta por qualquer sequência de caracteres, estará disponível para mudanças na opção de Configurações e será usado pelos NPCs como nome para se referir ao jogador.    
+
+  > Idade – aceita um número inteiro entre 18 a 100, pode ser conferido nas Configurações, mas não alterado. Se o valor inserido pelo jogador for menor que 18, retorna a mensagem “Oh, parece que você ainda é muito novo para usar nosso aplicativo! Volte em breve.”; se maior que 100, retorna mensagem de opção inválida.  
+
+  > O que você busca? – o jogador pode selecionar entre “Homem”, “Mulher” e “Ambos”.  
+
+  > Biografia – campo para o jogador fazer uma breve descrição sua usando uma sequencia de no máximo 100 caracteres. Pode ser alterado posteriormente.  
+
+\> Sair.  
+Finaliza o programa.
+
+
+### Menu Inicial – tela inicial permanente ao iniciar o aplicativo após concluir o Login.
+
+\> Configurações.  
+O jogador tem acesso ao seu próprio perfil e pode selecionar a opção de compra para ter mais uma conversa no aplicativo, além de poder alterar as informações inseridas em Login (seguindo as regras descritas na seção).
+
+> Comprar mais conversas! – inserir as informações fictícias para confirmação de compra e pode adquirir até uma conversa a mais, respeitando o limite máximo de quatro possíveis encontros:  
+*	“Confirme seu nome:” – o jogador precisa colocar o mesmo nome que usou para cadastrar seu perfil.
+*	“Você deseja comprar mais uma conversa por R$5,00?” – escolhe entre “SIM” e “NÃO”.  
+
+>Retornar – retorna o jogador ao menu inicial.  
+
+\> Buscar encontro!  
+A partir desta opção o jogador tem acesso a descrição do NPC e pode iniciar um diálogo:  
+
+>Conversar – desbloqueia quatro diferentes opções de diálogo que são classificadas como:    
+>
+> *	BOM (+40 de interesse);
+> *	REGULAR (+20 de interesse);
+> *	RUIM (-10 de interesse);
+> *	PÉSSIMO (-30 de interesse).  
+
+> Flerte – na opção de “Flertar” a programação escolhe um flerte de uma lista disponível e o resultado depende da sorte, funcionando como um D20, seguindo a fórmula (resultado - 10) * 10. Além disso, é necessário gastar CORAGEM para usar esta opção.  
+>
+>Exemplo: jogador seleciona “Flerte”, se tira 4 e são descontados -60 pontos do Nível de Interesse, se 10 não são descontados pontos, e se 13 são somados +30.  
+
+> Bloquear – uma medida drástica para escapar de uma conversa ruim. Desta forma, o jogador pode finalizar uma conversa qualquer momento e iniciar outra.  
+>
+>*	“Tem certeza que deseja bloquear “Nome do NPC”?” O jogador pode escolher entre “SIM” ou “NÃO”; se SIM, retorna ao Menu Inicial; se NÃO, continua a tela de interação com o NPC.
+>*	Mesmo que o jogador escolha finalizar uma conversa antes de chamar o NPC para um encontro, ele ainda terá gasto uma das suas três (ou quatro) chances de conversa.  
+
+> Chamar para encontro – pode retornar uma resposta POSITIVA ou NEGATIVA dependendo do nível de interesse.  
+
+\> Sair.  
+Essa opção finaliza o jogo, independente da quantidade de conversas iniciadas ou encontros conseguidos: 
+> Sair para encontro: inicia a seção Encontro.  
+> Sair do aplicativo: salva as informações do jogador e finaliza o programa.
+
+### Encontro – disponibilizado ao jogador após finalizar sua seção no aplicativo e iniciar o(s) encontro(s).  
+
+*“Após algumas horas no aplicativo buscando por encontros, finalmente chegou o momento de começar a noite, será o seu melhor dia dos namorados!”*  
+
+Cada opção disponível remete a preferência de um NPC, o jogador deve se atentar aos diálogos para descobrir a opção mais adequada. Cada NPC começa com o nível de satisfação pelo encontro em 70 pontos, podendo atingir no mínimo 0 pontos e no máximo 100 pontos de satisfação.    
+
+\> O que vai vestir?  
+O jogador pode selecionar uma opção entre os estilos disponíveis:  
+
+>*	Clássico: terninho e poucos acessórios.
+>*	Elegante: um conjunto simples e limpo, com acessórios marcantes.
+>*	Esportivo: uma camisa justa e bons jeans.
+>*	Romântico: muitas camadas de roupa estampada.
+>*	Sexy: uma roupa justa com pouco decote.  
+
+\> Vamos comprar presentes!  
+O jogador pode comprar uma das opções disponíveis:
+>*	Chocolates.
+>*	Flores.
+>*	Vinhos.
+>*	Livros.  
+
+\> Melhor escolher um bom lugar.  
+O jogador deve selecionar o local para o encontro:  
+
+>*	Restaurante.
+>*	Praça.
+>*	Praia.
+>*	Parque.  
+
+Após finalizar esta etapa, o jogo retorna o resultado:  
+
+>*	“Nome do NPC” adorou o encontro! (81 – 100 pontos de satisfação);
+>*	“Nome do NPC” gostou do encontro! (61 – 80 pontos de satisfação);
+>*	“Nome do NPC” achou o encontro normal. (41 – 60 pontos de satisfação);
+>*	“Nome do NPC” não gostou do encontro... (21 – 40 pontos de satisfação);
+>*	“Nome do NPC” odiou o encontro! (0 – 20 pontos de satisfação).  
+
+E em seguida exibe a mensagem final, baseada na quantidade de encontros conseguidos (informações descritas na seção de “Regras principais – Finais”).
+
+## Dados, recursos e valores que mudam durante a partida:
+
+### Recursos:
+
+**Quantidade de conversas:** o jogo inicia com três conversas disponíveis, mas pode alterar este valor caso use a opção de compra dentro do aplicativo para ter mais chances de conseguir um encontro.  
+
+### Dados:
+
+**Personagens:** o jogo conta com uma coleção de personagens que são escolhidos de forma aleatória durante uma partida, sem serem repetidos, podendo gerar uma sequência diferente a cada partida.   
+
+**Perfil do jogador:** dados como nome, biografia e preferências podem ser alterados a qualquer momento durante a partida.  
+
+### Valores:  
+
+**Nível de interesse:** o valor de interesse de um personagem varia a cada interação durante a conversa. O medidor inicia em 20 antes de qualquer interação, podendo atingir o valor máximo de 100 e mínimo de -100 até o fim da conversa.  
+
+**Coragem:** corresponde a um valor que inicia no seu máximo, 100, e pode diminuir até chegar a 0. Este medidor diminui a cada vez que o jogador usa a opção de “Flerte”.  
+
+**Quantidade de encontros:** apesar de não ser um valor visível para o jogador, a programação armazena o número de encontros conseguidos por ele e, com base neste dado, escolhe um final específico ao fim do jogo.
+
+## Regras principais:  
+
+*Condição de aceite –* fatores considerados para o retorno de uma resposta positiva do NPC ao convite de encontro.  
+
+*	Ter o nível de interesse igual ou maior que 60. Caso o jogador faça o convite a um NPC com o nível de interesse inferior a 60, a reposta será imediatamente NEGATIVA;
+*	O nível de interesse determina a porcentagem de chances do NPC aceitar o encontro, então quanto maior, mais chances da resposta ser POSITIVA. Por exemplo, se o NPC está com 85 de interesse, ao fazer o convite o jogador tem 85% de chances da resposta ser POSITIVA e 15% da reposta ser NEGATIVA.
+*	Como funciona: o sistema escolha um número aleatório entre 1 e 100, se este número for menor que o valor de interesse, a resposta será positiva, se for maior, a reposta será negativa.  
+
+*Flertar –* quando esta opção pode ser usada.  
+
+*	Cada opção de “Flerte” dentro de um diálogo com o NPC consome 25 de CORAGEM;
+*	Se o medidor de coragem chegar a 0, a opção retornará a mensagem “Oh, parece que você não tem coragem o suficiente para flertar agora...” antes de voltar ao Menu anterior.  
+
+*Fim do diálogo –* o que é considerado para determinar o fim de uma conversa com o NPC.  
+
+*	Manual: o jogador pode escolher a opção de “Bloquear” e finalizar imediatamente uma conversa;
+*	Automático: o jogo finaliza automaticamente uma conversa após o jogador selecionar a opção de “Chamar para encontro”, independente da resposta ser POSITIVA ou NEGATIVA.
+*	Por limite: caso o jogador atinja -60 pontos de interesse com o NPC, ele é bloqueado e a conversa finaliza.  
+
+*Condição de compra –* o limite da opção.  
+
+*	Em “Confirme seu nome:” o jogador deve inserir o mesmo nome utilizado em Login para o cadastro do perfil; se incorreto, ao finalizar a ação de Compra retorne a mensagem: “Informações incorretas! Preencha seu nome novamente.” e apresente o menu de Compra novamente.
+*	Caso o jogador finalize a Compra com “NÃO”: retorna a mensagem “Compra não finalizada!” e o jogador volta ao Menu Inicial.
+*	Caso o jogador finalize a Compra com “SIM”: se o número máximo de conversas for atingido (quatro), retorna a mensagem “Parece que você atingiu o número máximo de conversas! Considere conversar um pouco antes de voltar aqui ;)”; se o número máximo de conversas não foi atingido, retorna a mensagem *“Compra finalizada com sucesso! Agora você tem mais uma conversa :D”* e Conversas + 1.  
+
+*Opção de compra disponível –* alerta ao jogador.  
+
+*	O texto “Você pode ter mais uma conversa! Deseja compra-la na loja?” aparece para o jogador como um “pop-up” após ele utilizar todas as suas conversas, mas não ter utilizado a opção de compra. 
+*	O jogador pode escolher entre “SIM” e “NÃO”; se SIM, será redirecionado diretamente para opção “Comprar mais conversas!”; se NÃO, o jogo segue para a próxima etapa.  
+
+*Encontro –* regras específicas para a seção de encontro.  
+
+*	A seção de encontro em “Ações disponíveis para o jogador” fica disponível apenas caso o jogador tenha marcado, no mínimo, um encontro. As ações disponíveis para o jogador em Encontro serão repetidas antes de cada interação final, para cada NPC. 
+*	Caso o jogador não tenha marcado nenhum encontro na seção de “Buscar encontro!”, será automaticamente redirecionado aos finais 1 ou 2.
+*	O jogador escolhe o local, o presente e as suas roupas. Cada uma dessas escolhas aumentam 10 pontos de satisfação para o NPC cuja preferência for corretamente atendida; se feitas incorretamente, descontam 10 pontos de satisfação do total do NPC.
+*	Caso o jogador tenha mais de um encontro, diminui-se 10 pontos de satisfação para cada encontro a mais marcado do total de todos os NPCs. Por exemplo, se o jogador marcou três encontros, serão descontados 30 pontos de satisfação de cada um dos três NPCs convidados; se marcou apenas um, não sofre alteração.
+
+*Finais –* condições para conseguir um final específico.  
+
+*	A informação do final é disponibilizada apenas após a conclusão da fase de encontro.
+*	**Final 1 – Melhor nem tentar:** o jogador finaliza o jogo antes de iniciar qualquer interação;
+“Você rolou pelas opções do aplicativo sem sequer iniciar uma conversa. Entediado, fechou as abas abertas no celular e voltou a atenção para o mundo real ao seu redor, uma breve olhada no ambiente te fez perceber que tem muita coisa em casa pra ser feita ao invés de procurar por gente. Suspirando, você se encosta no sofá e aumenta o volume da TV.”
+*	**Final 2 – Não foi dessa vez:** o jogador não consegue nenhum encontro, mas iniciou pelo menos um diálogo;
+“Depois de diálogos desconfortáveis e rejeições dolorosas durante toda a vida, não deveria ser tão humilhante dessa vez! O aplicativo ainda está aberto no celular deixado de lado, você desliza as costas pelo sofá até chegar no chão gelado. Olhando para o teto meio sujo, você finaliza a noite em reflexão profunda.”
+*	**Final 3 – Almas gêmeas:** o jogador conseguiu apenas um encontro;
+“Você podia sentir o suor grudar em todas as partes do seu corpo, a conversa foi agradável e não havia motivos para nervosismo, você até se sentia confiante, mas as flores começando a murchar na sua mão parecem no mínimo um sinal visual de que as coisas não vão sair como o esperado. Com atenção você caminha até o local marcado com antecedência. Uma voz suave chama sua atenção, e na primeira vez que você observou aquele belo olhar brilhante, soube que estava perdido.”
+*	**Final 4 – Calma amor:** o jogador conseguiu exatamente dois encontros;
+“OK, não era de se esperar, mas agora você estava mais do que confiante! Você veste a melhor roupa, passa o perfume mais cheiroso, escova bem os dentes e usa o resto do seu tempo disponível para treinar algumas falas e... outras coisas em frente ao espelho. Com animação, você sai pela porta da frente pronto para arrasar corações. É bom dar conta do recado.”
+*	**Final 5 – São muitas namoradas:** o jogador conseguiu exatamente três encontros;
+“Talvez tenha sido exagero da sua parte procurar por tantos encontros, quer dizer, você estava desesperado, mas nem tanto! Agora não havia como voltar atrás, você se arruma e sai rapidamente confiante das suas habilidades sociais, mas infelizmente isso não ia te salvar do fator tempo. Quem diria que marcar 3 diferentes encontros de 40 minutos cada não daria tão certo? Talvez alguém ainda fale com você depois de uma saída medíocre” 
+*	**Final 6 – Não deu conta do recado:** o jogador conseguiu mais de três encontros.
+“Você mentiria se dissesse que não sabe o que levou você até esse momento, sentado no meio fio em frente a sua casa, sozinho. Recapitulando as últimas horas, você não sabe dizer quando realmente as coisas começaram a dar errado. Será que foi quando confundiu os nomes das pessoas com quem ia sair? Os presentes entregues errado? O restaurante repetido? Ou todos terem descoberto seu planejamento (quase) inexistente? Infelizmente, não há nada que você possa fazer no momento.”
+
+## Condições de encerramento:
+
+Por escolha do jogador: a opção de “Sair” está sempre disponível e pode ser acessada a qualquer momento durante o jogo, finalizando a sessão.   
+
+Por limite de conversas atingido: quando não houver mais possibilidade de iniciar conversas dentro do jogo, o dia automaticamente finaliza com a mensagem *“Oh, parece que você atingiu o seu limite de conversas no nosso aplicativo! Mas não se preocupe, é hora do encontro!”*, leva a seção de Encontro e a um dos seis finais possíveis.
+
+## Escolhas inválidas:
+
+Caso o jogador selecione uma opção inexistente ou indisponível no momento, o jogo retorna com a seguinte mensagem: *“Oops! Falha no nosso sistema, esta não é uma opção correspondente! :(”*. Após isso, o menu anteriormente apresentado retorna para que o jogador possa fazer uma nova seleção e continuar o jogo.
+
+## Coleção de dados prevista e sua finalidade:
+
+Coleção de personagens: permite guardar de forma organizada os dados base de cada personagem, como nome, gênero e descrição, e ordená-los de uma forma que facilite o sistema encontra-los e não repetir os NPCs durante uma partida.  
+
+Flertes: diálogos curtos listados que são selecionados de forma aleatória conforme as condições desta opção que, diferente dos personagens, podem ser repetidos durante uma partida pois podem retornar valores diferentes baseados na sorte. 
+
+## Dado ou conjunto de dados previsto para persistência:
+
+Quantidade de conversas restantes: quando o jogador utiliza a opção Sair com conversas disponíveis, o jogo salva esse valor e ele será somado às três conversas disponibilizadas ao abrir o aplicativo, atingindo um limite máximo de quatro conversas. Não é possível utilizar a opção de compra se o limite máximo de conversas foi atingido.  
+
+Informações de compra: são os dados fictícios de compra solicitados apenas na primeira vez que o jogador seleciona esta opção. 
+
+## Exemplos de decisões e consequências:
+
+### Curto prazo:
+Opções de diálogo – apesar de, na programação, cada opção ter um valor pré-definido, ele não está visualmente disponível para o jogador numa partida. O jogador deve ter atenção a descrição de cada personagem e fazer as escolhas que mais condizem com o perfil do NPC para atingir resultados positivos, caso contrário, ele terá cada vez menos chances de conseguir um encontro.  
+
+### Longo prazo:
+Chamar para encontro – esta opção, apesar de estar disponível para o jogador assim que uma conversa com o NPC for iniciada, deve ser considerada com cuidado. Dependendo da quantidade de respostas positivas durante uma partida, um final alternativo será selecionado para definir o fim da experiência.
+
+## Limitações assumidas para manter o escopo viável:
+
+Considerando a disponibilidade de tempo e limitações de recursos, a equipe buscou manter uma proposta simples e com poucas variações na história.  
+
+* Limite de conversas – a limitação de quantidade de conversas dispensa a necessidade de criar uma coleção muito abrangente de personagens, pois nenhum deles deve se repetir durante uma partida. Para uma partida única de teste, por exemplo, não são necessários mais que quatro personagens.  
+* Interface de aplicativo – seguir o design de um aplicativo de encontros limita a quantidade de opções disponível para o jogador interagir dentro e fora dos espaços de diálogo, não sendo necessário o desenvolvimento de lugares ou mapas, por exemplo.  
+
+
+---
+Diagramas:
+
+```mermaid
+
+---
+config:
+  theme: mc
+---
+stateDiagram
+  direction TB
+  [*] --> Inicio
+  Inicio --> MenuPrincipal:Inicializar partida
+  MenuPrincipal --> PerfilNPC:Buscar encontro
+  MenuPrincipal --> Loja:Configurações / Loja
+  MenuPrincipal --> Encerramento:Sair
+  Loja --> MenuPrincipal:Compra confirmada
+  Loja --> MenuPrincipal:Compra cancelada
+  Loja --> Loja:Conversa extra já utilizada
+  PerfilNPC --> Dialogo:Iniciar conversa
+  Dialogo --> Dialogo:Escolher resposta
+  Dialogo --> Flerte:Selecionar flerte
+  Dialogo --> Convite:Chamar para encontro
+  Dialogo --> Desistencia:Bloquear
+  Flerte --> Dialogo:Resultado do D20 e atualização do interesse
+  Flerte --> Dialogo:Coragem insuficiente
+  Convite --> Recusado:Interesse abaixo de 60
+  Convite --> Aceito:Interesse suficiente e NPC aceita
+  Convite --> Recusado:NPC recusa
+  Aceito --> MenuPrincipal:Incrementar encontros
+  Recusado --> MenuPrincipal:Encerrar tentativa
+  Desistencia --> MenuPrincipal:Encerrar tentativa
+  MenuPrincipal --> Encerramento:Limite de conversas atingido
+  Encerramento --> [*]
+  Aceito --> s1
+  s1 --> s2
+  s2 --> s3
+  s2 --> s4
+  s3 --> s5
+  s4 --> s6
+  s6 --> s7
+  s5 --> s7
+  s7 --> s8
+  s7 --> s10
+  s10 --> MenuPrincipal
+  s8 --> [*]
+  s1:Ir pro encontro
+  s2:Escolher outflit
+  s3:Bom
+  s4:Ruim
+  s5:Avaliação boa
+  s6:Avaliação Ruim
+  s7:Começar novamente?
+  s8:não
+  s10:Sim
+```
+
+# Alterações da M1 para entrega da M2:
+
+### Alterações em “Ações disponíveis para o jogador”:
+*	Foi adicionado uma aba de “Login” como tela inicial para o jogo, em seguida apresentando o “Menu Inicial” ao jogador;
+*	Em “Configurações” foram adicionadas informações e opções sobre a função de compra de conversas;
+*	Correção da fórmula para flerte e exemplo atualizado;
+*	Adicionado a seção de “Encontro”.
+### Alterações em “Regras principais”:
+*	Adicionado as “Condições de compra” para determinar o limite da função;
+*	Em “Finais” foram implementados os textos que aparecerão para o jogador após finalizar o jogo e as condições foram atualizadas;
+*	Foi adicionado uma condição para quando o jogador utilizou todas as suas conversas, mas ainda não utilizou a opção de compra;
+*	Implementada uma regra para limite de conversas;	
+### Alteração em “Dados ou conjunto de dados para persistência”:
+*	Foi removido o perfil do jogador como conjunto de dados persistentes;
+*	Foi adicionado “Quantidade de conversas restantes” como dado persistente.
+### Alterações gerais:
+•	Com as condições de compra atualizada, algumas partes do texto foram alteradas para manter o sentido entre os tópicos do documento, mas sem alterar a proposta principal do jogo.  
+
+Demais tópicos foram mantidos da documentação entregue durante a M1.
+
+## Declaração de uso de Inteligência Artificial generativa:
+
+Até a presente entrega da M2, a equipe declara que nenhuma ferramenta de Inteligência Artificial generativa foi utilizada para qualquer etapa da produção desde trabalho.
+
+## Página no Itch.io:
+https://rauweiss.itch.io/lets-date
+
+## Canal no youtube:
+
