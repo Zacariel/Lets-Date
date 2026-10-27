@@ -252,10 +252,12 @@ Considerando a disponibilidade de tempo e limitações de recursos, a equipe bus
 
 * Limite de conversas – a limitação de quantidade de conversas dispensa a necessidade de criar uma coleção muito abrangente de personagens, pois nenhum deles deve se repetir durante uma partida. Para uma partida única de teste, por exemplo, não são necessários mais que quatro personagens.  
 * Interface de aplicativo – seguir o design de um aplicativo de encontros limita a quantidade de opções disponível para o jogador interagir dentro e fora dos espaços de diálogo, não sendo necessário o desenvolvimento de lugares ou mapas, por exemplo.  
-
+  
 
 ---
-Diagramas:
+## Diagramas:
+
+Fluxo de Jogo:
 
 ```mermaid
 
@@ -310,6 +312,56 @@ stateDiagram
   s8:não
   s10:Sim
 ```
+Interações com Npcs:
+
+```mermaid
+---
+config:
+  theme: mc
+---
+stateDiagram-v2
+    [*] --> Inicio
+
+    Inicio --> MenuPrincipal : Inicializar partida
+
+    MenuPrincipal --> PerfilNPC : Buscar encontro
+    MenuPrincipal --> Loja : Configurações / Loja
+    MenuPrincipal --> Encerramento : Sair
+
+    %% LOJA
+    Loja --> MenuPrincipal : Compra confirmada
+    Loja --> MenuPrincipal : Compra cancelada
+    Loja --> Loja : Conversa extra já utilizada
+
+    %% PERFIL E DIÁLOGO
+    PerfilNPC --> Dialogo : Iniciar conversa
+
+    Dialogo --> Dialogo : Escolher resposta
+    Dialogo --> Flerte : Selecionar flerte
+    Dialogo --> Convite : Chamar para encontro
+    Dialogo --> Desistencia : Bloquear
+
+    %% FLERTE
+    Flerte --> Dialogo : Resultado do D20 e atualização do interesse
+    Flerte --> Dialogo : Coragem insuficiente
+
+    %% CONVITE
+    Convite --> Recusado : Interesse abaixo de 60
+    Convite --> Aceito : Interesse suficiente e NPC aceita
+    Convite --> Recusado : NPC recusa
+
+    %% RESULTADOS
+    Aceito --> MenuPrincipal : Incrementar encontros
+    Recusado --> MenuPrincipal : Encerrar tentativa
+    Desistencia --> MenuPrincipal : Encerrar tentativa
+
+    %% ENCERRAMENTO
+    MenuPrincipal --> Encerramento : Limite de conversas atingido
+
+    Encerramento --> [*]
+```
+
+---
 
 # Alterações da M1 para entrega da M2:
 
