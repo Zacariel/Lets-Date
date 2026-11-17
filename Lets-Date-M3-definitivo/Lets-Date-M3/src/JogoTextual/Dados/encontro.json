@@ -1,0 +1,19 @@
+// Roupas e locais que aparecem na fase de encontro.
+// O "id" é o que os NPCs usam em "preferencias" (npcs.json).
+{
+  "roupas": [
+    { "id": "classico",   "nome": "Clássico",  "descricao": "terninho e poucos acessórios" },
+    { "id": "elegante",   "nome": "Elegante",  "descricao": "um conjunto simples e limpo, com acessórios marcantes" },
+    { "id": "esportivo",  "nome": "Esportivo", "descricao": "uma camisa justa e bons jeans" },
+    { "id": "romantico",  "nome": "Romântico", "descricao": "muitas camadas de roupa estampada" },
+    { "id": "sexy",       "nome": "Sexy",      "descricao": "uma roupa justa com pouco decote" },
+    { "id": "casual",     "nome": "Casual",    "descricao": "camiseta de banda, moletom e tênis confortável" }
+  ],
+  "locais": [
+    { "id": "restaurante", "nome": "Restaurante", "descricao": "jantar à luz de velas" },
+    { "id": "praca",       "nome": "Praça",       "descricao": "piquenique e sorvete no fim da tarde" },
+    { "id": "praia",       "nome": "Praia",       "descricao": "caminhada na beira do mar" },
+    { "id": "parque",      "nome": "Parque",      "descricao": "trilha, lago e muito verde" },
+    { "id": "cinema",      "nome": "Cinema",      "descricao": "sessão dupla com pipoca grande" }
+  ]
+}

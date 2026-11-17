@@ -1,0 +1,573 @@
+// Personagens do Let's Date! Veja docs/como-adicionar-conteudo.md para criar novos (espero mesmo que voces leiam isso).
+// - genero: "Homem" ou "Mulher" (usado pelo filtro "O que você busca?")
+// - preferencias: ids de encontro.json (roupa e local) e de itens.json (presente)
+// - topicos: cada "Conversar" usa o próximo tópico; as opções aparecem embaralhadas
+// - qualidade: "Bom" (+40), "Regular" (+20), "Ruim" (-10) ou "Pessimo" (-30)
+// - dica (opcional): anotação que o jogador ganha ao escolher a opção
+// - loja (opcional): conseguir um encontro libera desconto permanente nesses itens
+// - use {apelido} para o NPC chamar o jogador pelo apelido
+[
+  {
+    "id": "maria",
+    "nome": "Maria Antônia",
+    "idade": 27,
+    "genero": "Mulher",
+    "biografia": "Estudante de veterinária 6/10. AMO meus cachorros e ADORO aproveitar a natureza!! Procurando um relacionamento sério! ^^",
+    "preferencias": { "roupa": "esportivo", "presente": "flores", "local": "praca" },
+    "topicos": [
+      {
+        "fala": "Oii {apelido}! Vi que você curtiu meu perfil ^^ Você gosta de animais?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Eu também amo cachorros! Na verdade, adoro todos os animais.", "resposta": "SIMM eles são bonitinhos demais! Compartilhamos essa paixão em comum ^^" },
+          { "qualidade": "Regular", "texto": "Admito que prefiro gatos, mas os cachorros têm seu charme...", "resposta": "Tudo bem, eles também são adoráveis ^^ aprendi a gostar de todos os animais, {apelido}." },
+          { "qualidade": "Ruim",    "texto": "Eu realmente não gosto de cachorros, como você lida com os pelos e a baba?", "resposta": "Eu realmente amo eles, isso são detalhes irrelevantes! Temos interesses bem diferentes..." },
+          { "qualidade": "Pessimo", "texto": "Não era melhor ter cursado medicina de verdade?", "resposta": "Eu curso medicina de verdade! Com essa mentalidade, é melhor você não ter animais..." }
+        ]
+      },
+      {
+        "fala": "E aí, o que você curte fazer num domingo de sol?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Andar de bicicleta e terminar o dia num piquenique ao ar livre!", "resposta": "AAAH eu AMO piquenique na praça! Se alguém aparecer com flores então, já ganhou meu coração ^^", "dica": "Maria ama piquenique na praça e adora ganhar flores." },
+          { "qualidade": "Regular", "texto": "Maratonar série embaixo da coberta.", "resposta": "Também é bom! Mas eu não aguento ficar parada, vivo de tênis e roupa de academia hehe", "dica": "Maria vive de tênis e roupa de academia: estilo esportivo." },
+          { "qualidade": "Ruim",    "texto": "Dormir até meio-dia. Sol é superestimado.", "resposta": "Hmm... cada um com seu ritmo, né." },
+          { "qualidade": "Pessimo", "texto": "Qualquer coisa longe de bicho e de mato.", "resposta": "Acho que a gente não combina muito, {apelido}..." }
+        ]
+      }
+    ],
+    "conviteAceito": "SIMMM! Eu topo, {apelido}! Já vou separar meu tênis mais bonito ^^",
+    "conviteRecusado": "Hmm... acho que ainda não, {apelido}. Quem sabe outro dia?",
+    "palavrasChave": [
+      "animais",
+      "cachorro",
+      "gato",
+      "natureza",
+      "veterinaria",
+      "trilha"
+    ],
+    "reacaoBiografia": "AAAH vi na sua bio que você curte {palavra}!! Já ganhou pontos comigo, {apelido} ^^",
+    "capitulos": [
+      {
+        "nivel": 1,
+        "preferencias": {
+          "roupa": "casual",
+          "presente": "pelucia",
+          "local": "parque"
+        },
+        "topicos": [
+          {
+            "fala": "Oi {apelido}... desculpa a demora pra responder. A Pipoca, minha cachorrinha mais velha, ficou doente essa semana e eu tô bem abalada.",
+            "opcoes": [
+              {
+                "qualidade": "Bom",
+                "texto": "Poxa, Maria... quer me contar como ela tá? Tô aqui pra ouvir.",
+                "resposta": "Obrigada, de verdade. Ela tem 14 anos, cresceu junto comigo... É estranho estudar veterinária e mesmo assim me sentir tão impotente.",
+                "dica": "Maria anda abalada: um passeio tranquilo no parque faria bem a ela."
+              },
+              {
+                "qualidade": "Regular",
+                "texto": "Vai dar tudo certo, ela é forte!",
+                "resposta": "Espero que sim... obrigada, {apelido}."
+              },
+              {
+                "qualidade": "Ruim",
+                "texto": "Bora sair pra você esquecer disso!",
+                "resposta": "Não é bem algo que dá pra esquecer, sabe?"
+              },
+              {
+                "qualidade": "Pessimo",
+                "texto": "Ah, mas é só um cachorro.",
+                "resposta": "Ela não é 'só' nada. Ela é da família."
+              }
+            ]
+          },
+          {
+            "fala": "Posso te contar uma coisa boba? Eu tenho um ursinho de pelúcia com a cara da Pipoca e durmo abraçada nele hahaha",
+            "opcoes": [
+              {
+                "qualidade": "Bom",
+                "texto": "Isso não é bobo, é fofo demais. Eu faria igual.",
+                "resposta": "Hehe sabia que você ia entender ^^ pelúcia é meu ponto fraco, sério. E nesses dias eu só quero roupa confortável.",
+                "dica": "Maria ama pelúcias e anda querendo roupa confortável: estilo casual."
+              },
+              {
+                "qualidade": "Regular",
+                "texto": "Haha, cada um com suas manias!",
+                "resposta": "Né? Pelo menos é uma mania fofa ^^"
+              },
+              {
+                "qualidade": "Ruim",
+                "texto": "Você não acha que tá meio velha pra isso?",
+                "resposta": "Não existe idade pra ter conforto, {apelido}."
+              },
+              {
+                "qualidade": "Pessimo",
+                "texto": "Que coisa infantil.",
+                "resposta": "Ok... vou guardar minhas coisas 'infantis' pra mim então."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "preferencias": {
+          "roupa": "esportivo",
+          "presente": "chocolates",
+          "local": "praia"
+        },
+        "topicos": [
+          {
+            "fala": "{apelido}!!! A Pipoca melhorou!!! E eu queria te agradecer... você foi a única pessoa que perguntou dela todo dia ^^",
+            "opcoes": [
+              {
+                "qualidade": "Bom",
+                "texto": "Que notícia boa! Eu fiquei torcendo de verdade por vocês duas.",
+                "resposta": "Você é diferente, sabia? Domingo a ONG vai fazer uma feira de adoção na praia... quer ir comigo? Vou de tênis e tudo, já aviso hehe",
+                "dica": "Maria quer ir à feira de adoção na praia, de roupa esportiva."
+              },
+              {
+                "qualidade": "Regular",
+                "texto": "Fico feliz! Agora você pode relaxar.",
+                "resposta": "Sim, finalmente consigo respirar!"
+              },
+              {
+                "qualidade": "Ruim",
+                "texto": "Ah, legal. Mudando de assunto...",
+                "resposta": "Ah... tá. Pode falar."
+              },
+              {
+                "qualidade": "Pessimo",
+                "texto": "Achei que você ia parar de falar dela agora.",
+                "resposta": "Nossa. Acho que me enganei sobre você."
+              }
+            ]
+          },
+          {
+            "fala": "Posso ser sincera? Eu tenho medo de me apegar. Da última vez que eu namorei, a pessoa sumiu do nada.",
+            "opcoes": [
+              {
+                "qualidade": "Bom",
+                "texto": "Obrigado por confiar isso em mim. Não vou sumir, e a gente pode ir no seu ritmo.",
+                "resposta": "...Ok. Acho que eu acredito em você, {apelido}. Ah, e se for me levar um docinho, chocolate é meu vício secreto hehe",
+                "dica": "Maria confessou que é viciada em chocolate."
+              },
+              {
+                "qualidade": "Regular",
+                "texto": "Relaxa, o passado ficou pra trás.",
+                "resposta": "É... fácil falar, né? Mas obrigada."
+              },
+              {
+                "qualidade": "Ruim",
+                "texto": "Acontece, todo mundo já levou um ghosting.",
+                "resposta": "Eu sei que acontece. Não deixa de doer."
+              },
+              {
+                "qualidade": "Pessimo",
+                "texto": "Talvez a pessoa tenha sumido por algum motivo, né?",
+                "resposta": "Uau. Valeu pela empatia, {apelido}."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alana",
+    "nome": "Alana Martins",
+    "idade": 19,
+    "genero": "Mulher",
+    "biografia": "Procuro alguém pra me divertir, sair pra beber e passar altas noites fora! Conheço a cidade toda e posso te levar para várias baladas diferentes!!",
+    "preferencias": { "roupa": "sexy", "presente": "vinho", "local": "restaurante" },
+    "topicos": [
+      {
+        "fala": "Oiee {apelido}! Bora agitar essa noite? Me conta, você curte uma balada?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Uau, você conhece todas as baladas mesmo?? Preciso de uma boa companhia pra me mostrar as melhores.", "resposta": "SIMM HAHAHA é um talento não tão secreto meu >:D dependendo do seu estilo te levo nos lugares mais INSANOS" },
+          { "qualidade": "Regular", "texto": "Admito que eu sou mais do tipo caseiro, não frequento muitas baladas.", "resposta": "Acontece, tem lugar pra todo tipo de gente! Às vezes eu NECESSITO de um ambiente com gente e música alta" },
+          { "qualidade": "Ruim",    "texto": "Não curto muito essas pessoas festeiras, você não consegue fazer outras coisas?", "resposta": "Você fala SEM me conhecer! Tenho minhas preferências, você tem as suas" },
+          { "qualidade": "Pessimo", "texto": "Com 19 anos já devia agir como adulta, quando você vai deixar de ser adolescente?", "resposta": "ISSO NÃO TEM NADA A VER! Você nem me conhece para assumir algo assim, se toca!" }
+        ]
+      },
+      {
+        "fala": "Antes da balada eu SEMPRE faço um esquenta. Qual seria o seu esquenta ideal?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Um jantar caprichado com um bom vinho pra brindar.", "resposta": "VOCÊ ME ENTENDE! Restaurante chique e uma taça de vinho, combinação PERFEITA >:D", "dica": "Alana adora jantar em restaurante e brindar com vinho." },
+          { "qualidade": "Regular", "texto": "Uma playlist boa e um look matador.", "resposta": "Look é TUDO! Eu só saio com roupa justa e salto, se é pra brilhar eu brilho!", "dica": "Alana adora um look ousado: estilo sexy." },
+          { "qualidade": "Ruim",    "texto": "Ah, eu prefiro ficar em casa e dormir cedo.", "resposta": "Sério?? Vou ter que te arrastar pra rua então HAHA" },
+          { "qualidade": "Pessimo", "texto": "Esquenta é coisa de quem precisa beber pra se divertir.", "resposta": "Nossa, que julgamento. Acabou o clima, {apelido}." }
+        ]
+      }
+    ],
+    "conviteAceito": "AEEE! Vai ser a melhor noite da sua vida, {apelido}! Se arruma, hein!",
+    "conviteRecusado": "Hmm, acho que não rolou a vibe, {apelido}... foi mal!",
+    "palavrasChave": [
+      "festa",
+      "balada",
+      "dancar",
+      "drinks",
+      "noitada"
+    ],
+    "reacaoBiografia": "Vi {palavra} na sua bio!! Já sei que a gente vai se dar MUITO bem, {apelido} >:D"
+  },
+  {
+    "id": "roberta",
+    "nome": "Roberta Cunha",
+    "idade": 30,
+    "genero": "Mulher",
+    "biografia": "Uma apreciadora da boa literatura, amante de filmes dramáticos e dona de um pequeno sebo. Nada melhor do que aproveitar o tempo livre com muita cultura ou longas caminhadas pela beira do mar.",
+    "preferencias": { "roupa": "elegante", "presente": "livro", "local": "praia" },
+    "loja": { "nome": "Sebo da Roberta", "itens": [ "livro" ], "desconto": 50 },
+    "topicos": [
+      {
+        "fala": "Olá, {apelido}. Vi que você também se interessa por histórias. O que costuma fazer no tempo livre?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Adoro o poder de um bom livro em nos transportar para realidades alternativas.", "resposta": "Ah, finalmente alguém para compartilhar esta paixão! Não é fascinante o que algumas histórias conseguem fazer conosco?" },
+          { "qualidade": "Regular", "texto": "Eu não costumo ler muito, mas assisto muitos filmes e séries no tempo livre.", "resposta": "Todos temos nossa forma de relaxar, não há nada errado nisso. Talvez só te falte encontrar uma boa história." },
+          { "qualidade": "Ruim",    "texto": "Pra que ler tantos livros se podemos achar tudo na internet hoje em dia?", "resposta": "O acesso fácil à informação não significa que todas as formas de conhecimento são iguais! O hábito da leitura nos traz outros benefícios." },
+          { "qualidade": "Pessimo", "texto": "Quem passa muito tempo lendo parece querer compensar algo que falta na vida real.", "resposta": "Sua conclusão é muito superficial. A leitura amplia nosso conhecimento, não substitui nenhuma experiência real." }
+        ]
+      },
+      {
+        "fala": "Qual seria, para você, o cenário perfeito para uma conversa longa e sem pressa?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Uma caminhada na beira do mar, trocando indicações de livros.", "resposta": "Exatamente o que eu faria. Ganhar um bom livro e caminhar pela praia ao entardecer... não há nada melhor.", "dica": "Roberta sonha com uma caminhada na praia e adora ganhar livros." },
+          { "qualidade": "Regular", "texto": "Um café silencioso, com todo mundo bem-vestido.", "resposta": "Gosto de elegância, admito. Um visual limpo com algum acessório marcante sempre me chama atenção.", "dica": "Roberta valoriza um visual elegante." },
+          { "qualidade": "Ruim",    "texto": "Uma festa barulhenta, quanto mais gente melhor.", "resposta": "Barulho demais me cansa. Prefiro ouvir a pessoa com quem estou." },
+          { "qualidade": "Pessimo", "texto": "Sei lá, conversa longa me dá sono.", "resposta": "Então talvez eu não seja a companhia ideal para você, {apelido}." }
+        ]
+      }
+    ],
+    "conviteAceito": "Será um prazer, {apelido}. Estou curiosa para continuar esta conversa pessoalmente.",
+    "conviteRecusado": "Agradeço o convite, {apelido}, mas acho que ainda não é o momento.",
+    "palavrasChave": [
+      "livro",
+      "leitura",
+      "literatura",
+      "filme",
+      "poesia"
+    ],
+    "reacaoBiografia": "Notei que você mencionou {palavra} na sua biografia, {apelido}. Isso diz muito sobre uma pessoa."
+  },
+  {
+    "id": "kayla",
+    "nome": "Kayla Schrute",
+    "idade": 35,
+    "genero": "Mulher",
+    "biografia": "Há mais de 15 anos no mesmo ramo! Busco uma pessoa decente para me relacionar e seguir a linhagem da família Schrute. Fazendas, tratores, beterrabas, flores e diversos outros bens para te impressionar.",
+    "preferencias": { "roupa": "classico", "presente": "chocolates", "local": "restaurante" },
+    "loja": { "nome": "Fazenda Schrute — beterrabas e flores", "itens": [ "flores" ], "desconto": 30 },
+    "topicos": [
+      {
+        "fala": "Identifique-se, {apelido}. Quais são suas qualificações para um relacionamento sério?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Poucas pessoas têm tanta disciplina para seguir no mesmo ramo por tanto tempo. Admiro isso.", "resposta": "Aparentemente você tem capacidade para observar os fatos. Outros desperdiçam seu tempo procurando um propósito para a vida." },
+          { "qualidade": "Regular", "texto": "Beterrabas são interessantes, acho.", "resposta": "Interessantes? São o sustento de uma linhagem inteira." },
+          { "qualidade": "Ruim",    "texto": "Não gosto muito de fazendas, suja muito a roupa.", "resposta": "Você não sobreviveria um dia no inverno rigoroso." },
+          { "qualidade": "Pessimo", "texto": "Você parece meio maluca com essas coisas de beterraba.", "resposta": "Falso. Sou perfeitamente sã. Você que é ignorante." }
+        ]
+      },
+      {
+        "fala": "Pergunta número dois. Qual é o encontro mais eficiente?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Um jantar formal em restaurante, horário marcado e uma caixa de chocolates.", "resposta": "Correto. Restaurante tem cardápio, horário e conta dividida. E chocolate é a única sobremesa aceitável além da beterraba.", "dica": "Kayla quer um jantar em restaurante e adora chocolates." },
+          { "qualidade": "Regular", "texto": "Um bom terno resolve qualquer encontro.", "resposta": "Concordo. Terno simples, poucos acessórios. Brilho em excesso é coisa de amador.", "dica": "Kayla aprecia o estilo clássico: terninho e poucos acessórios." },
+          { "qualidade": "Ruim",    "texto": "Ir sem planejar nada e ver no que dá.", "resposta": "Improviso é a mãe do fracasso." },
+          { "qualidade": "Pessimo", "texto": "Um encontro em qualquer lugar, menos numa fazenda chata.", "resposta": "Falso. Minha fazenda é a melhor do condado. Bloqueio iminente." }
+        ]
+      }
+    ],
+    "conviteAceito": "Aceito. Compareça pontualmente, {apelido}. Atrasos serão anotados.",
+    "conviteRecusado": "Negativo. Volte quando tiver mais qualificações.",
+    "palavrasChave": [
+      "fazenda",
+      "disciplina",
+      "pontual",
+      "beterraba",
+      "trabalhador"
+    ],
+    "reacaoBiografia": "Sua biografia menciona {palavra}. Qualificação aceita. Pode prosseguir, {apelido}."
+  },
+  {
+    "id": "davi",
+    "nome": "Davi Rocha",
+    "idade": 31,
+    "genero": "Homem",
+    "biografia": "Confeiteiro e dono da Confeitaria Doce Rocha. Chorei em todos os filmes de romance que já vi e não tenho vergonha disso. Procuro alguém para dividir a pipoca (e os bolos).",
+    "preferencias": { "roupa": "romantico", "presente": "pelucia", "local": "cinema" },
+    "loja": { "nome": "Confeitaria Doce Rocha", "itens": [ "chocolates" ], "desconto": 40 },
+    "topicos": [
+      {
+        "fala": "Oi, {apelido}! Pergunta importantíssima: doce ou salgado?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Doce, sempre! Ainda mais se for feito com carinho.", "resposta": "Resposta certa! Já estou pensando em qual bolo fazer pra você, haha." },
+          { "qualidade": "Regular", "texto": "Salgado, mas um docinho depois cai bem.", "resposta": "Equilíbrio, gostei. Mas vou te converter pro time do doce!" },
+          { "qualidade": "Ruim",    "texto": "Nenhum, tô de dieta eterna.", "resposta": "Poxa... um pedacinho de bolo não mata ninguém, né?" },
+          { "qualidade": "Pessimo", "texto": "Doce de confeitaria é tudo igual, compro no mercado mesmo.", "resposta": "Ai. Essa doeu no fundo do meu forno." }
+        ]
+      },
+      {
+        "fala": "E qual é o seu tipo de filme preferido?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Romance! Daqueles com final feliz e trilha sonora melosa.", "resposta": "Eu SABIA que você tinha bom gosto! Uma sessão de cinema de mãos dadas e um ursinho de pelúcia de lembrança... ai, sonho.", "dica": "Davi sonha com uma sessão de cinema e ama pelúcias." },
+          { "qualidade": "Regular", "texto": "Comédia, pra rir junto.", "resposta": "Rir junto é ótimo! Eu sou meio exagerado, adoro roupa estampada e cheia de camadas, combina com meu humor.", "dica": "Davi adora roupas estampadas: estilo romântico." },
+          { "qualidade": "Ruim",    "texto": "Terror, quanto mais sangue melhor.", "resposta": "Eu ia passar o filme inteiro de olho fechado, haha." },
+          { "qualidade": "Pessimo", "texto": "Filme de romance é coisa de gente carente.", "resposta": "Hm. Acho que eu sou bem carente então, {apelido}." }
+        ]
+      }
+    ],
+    "conviteAceito": "Sério?! Já vou separar a melhor fatia de bolo pra você, {apelido}!",
+    "conviteRecusado": "Ah... acho melhor não, {apelido}. Mas obrigado pelo convite!",
+    "palavrasChave": [
+      "doce",
+      "bolo",
+      "confeitaria",
+      "cozinhar",
+      "romance",
+      "chocolate"
+    ],
+    "reacaoBiografia": "Espera, você curte {palavra}?! Já tô pensando em qual receita fazer pra você, {apelido}!",
+    "capitulos": [
+      {
+        "nivel": 1,
+        "preferencias": {
+          "roupa": "casual",
+          "presente": "vinho",
+          "local": "praia"
+        },
+        "topicos": [
+          {
+            "fala": "Oi {apelido}... hoje foi um dia ruim. A confeitaria tá vazia faz semanas e o aluguel subiu. Tô pensando em fechar.",
+            "opcoes": [
+              {
+                "qualidade": "Bom",
+                "texto": "Sinto muito, Davi. Quer pensar comigo em alguma ideia pra atrair gente?",
+                "resposta": "Você faria isso? Nossa... ninguém nunca se ofereceu pra me ajudar. Obrigado de verdade."
+              },
+              {
+                "qualidade": "Regular",
+                "texto": "Que pena! Mas você vai dar a volta por cima.",
+                "resposta": "Tomara... obrigado pela força."
+              },
+              {
+                "qualidade": "Ruim",
+                "texto": "Ué, então abre outra coisa que dá mais dinheiro.",
+                "resposta": "Não é só dinheiro, sabe? É o meu sonho."
+              },
+              {
+                "qualidade": "Pessimo",
+                "texto": "Confeitaria nunca foi um negócio sério mesmo.",
+                "resposta": "...Foi exatamente isso que meu pai sempre disse."
+              }
+            ]
+          },
+          {
+            "fala": "Pra me distrair, topa um passeio? Quando preciso pensar, eu fico olhando o oceano.",
+            "opcoes": [
+              {
+                "qualidade": "Bom",
+                "texto": "Bora! Fim de tarde na praia e eu levo um vinho pra brindar às novas ideias.",
+                "resposta": "Isso é exatamente o que eu precisava. Pé na areia e um vinho... já me sinto melhor.",
+                "dica": "Davi quer pensar na vida na praia e brindar com vinho."
+              },
+              {
+                "qualidade": "Regular",
+                "texto": "Pode ser, mas vou de qualquer roupa, sem esforço.",
+                "resposta": "Também tô sem ânimo pra me arrumar, roupa casual mesmo hehe",
+                "dica": "Davi anda sem ânimo pra se arrumar: estilo casual."
+              },
+              {
+                "qualidade": "Ruim",
+                "texto": "Oceano? Prefiro um shopping.",
+                "resposta": "Shopping me lembra que eu tô sem dinheiro, haha..."
+              },
+              {
+                "qualidade": "Pessimo",
+                "texto": "Você precisa é parar de reclamar.",
+                "resposta": "Desculpa por te incomodar com meus problemas."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "preferencias": {
+          "roupa": "classico",
+          "presente": "livro",
+          "local": "restaurante"
+        },
+        "topicos": [
+          {
+            "fala": "{apelido}!!! Fiz aquele bolo que você sugeriu e vendeu TUDO! Teve fila na porta!",
+            "opcoes": [
+              {
+                "qualidade": "Bom",
+                "texto": "Eu sabia! Você é muito talentoso, só faltava o mundo descobrir.",
+                "resposta": "Para que eu choro... aliás, eu choro mesmo, você sabe haha. Obrigado por acreditar em mim."
+              },
+              {
+                "qualidade": "Regular",
+                "texto": "Que ótimo! Viu, não precisava fechar.",
+                "resposta": "Né? Ainda bem que eu não desisti."
+              },
+              {
+                "qualidade": "Ruim",
+                "texto": "Legal. Agora me dá desconto, né.",
+                "resposta": "Haha, você já tem desconto, espertinho."
+              },
+              {
+                "qualidade": "Pessimo",
+                "texto": "Sorte de principiante.",
+                "resposta": "Sorte? Dez anos de forno, {apelido}."
+              }
+            ]
+          },
+          {
+            "fala": "Posso te contar uma coisa? Meu pai nunca aceitou eu ser confeiteiro. A gente não se fala faz três anos.",
+            "opcoes": [
+              {
+                "qualidade": "Bom",
+                "texto": "Deve doer muito. Se um dia você quiser falar com ele, eu vou junto.",
+                "resposta": "Acho que... eu quero, sim. Mas antes queria um jantar tranquilo com você, num restaurante. E se você me der um livro de receitas antigo, eu juro que choro.",
+                "dica": "Davi quer um jantar tranquilo em restaurante e adoraria ganhar um livro."
+              },
+              {
+                "qualidade": "Regular",
+                "texto": "Família é complicado mesmo.",
+                "resposta": "É... mas eu sinto falta dele. Ele só usava roupa clássica, sabia? Ando me vestindo igual.",
+                "dica": "Davi está nostálgico: estilo clássico."
+              },
+              {
+                "qualidade": "Ruim",
+                "texto": "Então esquece ele, você não precisa de ninguém.",
+                "resposta": "Não sei se é tão simples assim."
+              },
+              {
+                "qualidade": "Pessimo",
+                "texto": "Talvez ele tivesse razão.",
+                "resposta": "Eu achei que você, de todas as pessoas, ia entender."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "thiago",
+    "nome": "Thiago Nakamura",
+    "idade": 24,
+    "genero": "Homem",
+    "biografia": "Programador de dia, mestre de RPG à noite. Coleciono jogos de tabuleiro e conheço todos os parques da cidade que têm wi-fi grátis. Moletom é meu uniforme.",
+    "preferencias": { "roupa": "casual", "presente": "jogo-tabuleiro", "local": "parque" },
+    "topicos": [
+      {
+        "fala": "Opa, {apelido}! Rolando a iniciativa aqui: você curte jogos?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Curto muito! Principalmente jogar junto com alguém.", "resposta": "Cooperativo é a melhor modalidade, concordo 100%!" },
+          { "qualidade": "Regular", "texto": "Jogo de vez em quando, no celular.", "resposta": "Já é um começo! Posso te apresentar uns jogos melhores, haha." },
+          { "qualidade": "Ruim",    "texto": "Jogo é coisa de criança, né?", "resposta": "Bom... criança com 40 jogos na estante, então." },
+          { "qualidade": "Pessimo", "texto": "Gamer só sabe ficar trancado no quarto.", "resposta": "Eu saio do quarto, viu? Pra ir ao parque. E pra te bloquear, talvez." }
+        ]
+      },
+      {
+        "fala": "Qual seria um rolê perfeito pra você num sábado?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Levar um jogo de tabuleiro pro parque e jogar na grama.", "resposta": "VOCÊ LEU MEU DIÁRIO?! Parque, sombra de árvore e um jogo de tabuleiro novo... perfeito.", "dica": "Thiago ama ir ao parque e ganhar jogos de tabuleiro." },
+          { "qualidade": "Regular", "texto": "Algo tranquilo, sem precisar me arrumar muito.", "resposta": "Ufa! Eu sou do time camiseta de banda e moletom, não sei nem dar nó em gravata.", "dica": "Thiago prefere o estilo casual." },
+          { "qualidade": "Ruim",    "texto": "Uma balada lotada até o sol nascer.", "resposta": "Minha bateria social acaba em 40 minutos, haha." },
+          { "qualidade": "Pessimo", "texto": "Qualquer coisa, desde que você deixe o celular em casa.", "resposta": "Eu sou programador, {apelido}. O celular é parte do meu corpo." }
+        ]
+      }
+    ],
+    "conviteAceito": "Acerto crítico! Aceito, {apelido}! Vou levar meus dados da sorte.",
+    "conviteRecusado": "Rolei um 1 aqui... acho que não vai rolar, {apelido}.",
+    "palavrasChave": [
+      "jogo",
+      "rpg",
+      "games",
+      "tabuleiro",
+      "programa",
+      "anime"
+    ],
+    "reacaoBiografia": "Pera, {palavra} na bio?! +10 de carisma pra você, {apelido}!"
+  },
+  {
+    "id": "rafael",
+    "nome": "Rafael Antunes",
+    "idade": 34,
+    "genero": "Homem",
+    "biografia": "Advogado e sommelier nas horas vagas. Acredito que um bom vinho e uma boa conversa resolvem quase tudo. Pontualidade é um charme.",
+    "preferencias": { "roupa": "elegante", "presente": "vinho", "local": "restaurante" },
+    "topicos": [
+      {
+        "fala": "Boa noite, {apelido}. O que você mais valoriza numa pessoa?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Educação e uma boa conversa.", "resposta": "Concordo plenamente. É raro encontrar as duas coisas juntas." },
+          { "qualidade": "Regular", "texto": "Senso de humor.", "resposta": "Importante, sem dúvida. Desde que saiba a hora certa de usar." },
+          { "qualidade": "Ruim",    "texto": "Que pague a conta.", "resposta": "Hm. Critério interessante." },
+          { "qualidade": "Pessimo", "texto": "Advogado só pensa em dinheiro, né?", "resposta": "Generalizações não se sustentam num tribunal, {apelido}. Nem num encontro." }
+        ]
+      },
+      {
+        "fala": "Como seria a sua noite ideal?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Um jantar num bom restaurante, com um vinho escolhido a dedo.", "resposta": "Você fala a minha língua. Um tinto encorpado num restaurante tranquilo... impecável.", "dica": "Rafael quer jantar em restaurante e adora ganhar vinho." },
+          { "qualidade": "Regular", "texto": "Algo arrumado, mas sem exagero.", "resposta": "A elegância está nos detalhes: um conjunto limpo e um bom acessório já dizem muito.", "dica": "Rafael valoriza um visual elegante." },
+          { "qualidade": "Ruim",    "texto": "Um rodízio de pizza, quanto mais barato melhor.", "resposta": "Tem seu valor... mas não é bem o meu estilo." },
+          { "qualidade": "Pessimo", "texto": "Ficar em casa vendo vídeo de gatinho.", "resposta": "Acho que nossas agendas não vão bater." }
+        ]
+      }
+    ],
+    "conviteAceito": "Será um prazer, {apelido}. Deixe a carta de vinhos comigo.",
+    "conviteRecusado": "Agradeço, {apelido}, mas prefiro declinar.",
+    "palavrasChave": [
+      "vinho",
+      "gastronomia",
+      "jantar",
+      "viagem",
+      "educacao"
+    ],
+    "reacaoBiografia": "Vi que você aprecia {palavra}, {apelido}. Temos um bom ponto de partida."
+  },
+  {
+    "id": "bruno",
+    "nome": "Bruno Silveira",
+    "idade": 27,
+    "genero": "Homem",
+    "biografia": "Instrutor de surf, acordo às 5h pra pegar onda. Se tiver show de rock na orla, tô dentro. Procuro alguém pra dividir o pôr do sol.",
+    "preferencias": { "roupa": "esportivo", "presente": "ingressos-show", "local": "praia" },
+    "topicos": [
+      {
+        "fala": "E aí, {apelido}! Já pegou onda alguma vez?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Nunca, mas adoraria que você me ensinasse!", "resposta": "Fechou! A primeira aula é por minha conta, haha." },
+          { "qualidade": "Regular", "texto": "Já tentei, levei um caldo e desisti.", "resposta": "Todo surfista já levou caldo! Faz parte." },
+          { "qualidade": "Ruim",    "texto": "Prefiro piscina, mar é muito gelado.", "resposta": "Ah, mas a água fria acorda a alma!" },
+          { "qualidade": "Pessimo", "texto": "Surfista é tudo desocupado.", "resposta": "Desocupado que acorda às 5h? Valeu, hein, {apelido}." }
+        ]
+      },
+      {
+        "fala": "Qual o melhor jeito de terminar o dia, pra você?",
+        "opcoes": [
+          { "qualidade": "Bom",     "texto": "Pôr do sol na praia e depois um show ao vivo.", "resposta": "Isso aí! Pé na areia e um show de rock... se você aparecer com ingressos, eu caso, haha.", "dica": "Bruno ama a praia e adoraria ganhar ingressos de show." },
+          { "qualidade": "Regular", "texto": "Depois de um treino, banho e roupa confortável.", "resposta": "Tô sempre de camiseta justa e jeans, roupa esportiva é a minha cara.", "dica": "Bruno curte o estilo esportivo." },
+          { "qualidade": "Ruim",    "texto": "Num shopping com ar-condicionado.", "resposta": "Shopping me dá sono, hahaha." },
+          { "qualidade": "Pessimo", "texto": "Dormindo cedo, que é coisa de gente séria.", "resposta": "Aí não dá, né? A vida tá lá fora!" }
+        ]
+      }
+    ],
+    "conviteAceito": "Partiu! Vai ser irado, {apelido}!",
+    "conviteRecusado": "Valeu pelo convite, {apelido}, mas acho que não vai rolar.",
+    "palavrasChave": [
+      "surf",
+      "praia",
+      "oceano",
+      "rock",
+      "esporte",
+      "academia"
+    ],
+    "reacaoBiografia": "Ó, {palavra} na bio! Já gostei de você, {apelido}!"
+  }
+]

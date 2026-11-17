@@ -1,0 +1,38 @@
+// Textos dos seis finais (iguais ao documento do jogo).
+[
+  {
+    "final": "MelhorNemTentar",
+    "titulo": "Melhor nem tentar",
+    "texto": "Você rolou pelas opções do aplicativo sem sequer iniciar uma conversa. Entediado, fechou as abas abertas no celular e voltou a atenção para o mundo real ao seu redor, uma breve olhada no ambiente te fez perceber que tem muita coisa em casa pra ser feita ao invés de procurar por gente. Suspirando, você se encosta no sofá e aumenta o volume da TV."
+  },
+  {
+    "final": "NaoFoiDessaVez",
+    "titulo": "Não foi dessa vez",
+    "texto": "Depois de diálogos desconfortáveis e rejeições dolorosas durante toda a vida, não deveria ser tão humilhante dessa vez! O aplicativo ainda está aberto no celular deixado de lado, você desliza as costas pelo sofá até chegar no chão gelado. Olhando para o teto meio sujo, você finaliza a noite em reflexão profunda."
+  },
+  {
+    "final": "AlmasGemeas",
+    "titulo": "Almas gêmeas",
+    "texto": "Você podia sentir o suor grudar em todas as partes do seu corpo, a conversa foi agradável e não havia motivos para nervosismo, você até se sentia confiante, mas as flores começando a murchar na sua mão parecem no mínimo um sinal visual de que as coisas não vão sair como o esperado. Com atenção você caminha até o local marcado com antecedência. Uma voz suave chama sua atenção, e na primeira vez que você observou aquele belo olhar brilhante, soube que estava perdido."
+  },
+  {
+    "final": "CalmaAmor",
+    "titulo": "Calma amor",
+    "texto": "OK, não era de se esperar, mas agora você estava mais do que confiante! Você veste a melhor roupa, passa o perfume mais cheiroso, escova bem os dentes e usa o resto do seu tempo disponível para treinar algumas falas e... outras coisas em frente ao espelho. Com animação, você sai pela porta da frente pronto para arrasar corações. É bom dar conta do recado."
+  },
+  {
+    "final": "SaoMuitasNamoradas",
+    "titulo": "São muitas namoradas",
+    "texto": "Talvez tenha sido exagero da sua parte procurar por tantos encontros, quer dizer, você estava desesperado, mas nem tanto! Agora não havia como voltar atrás, você se arruma e sai rapidamente confiante das suas habilidades sociais, mas infelizmente isso não ia te salvar do fator tempo. Quem diria que marcar 3 diferentes encontros de 40 minutos cada não daria tão certo? Talvez alguém ainda fale com você depois de uma saída medíocre."
+  },
+  {
+    "final": "NaoDeuContaDoRecado",
+    "titulo": "Não deu conta do recado",
+    "texto": "Você mentiria se dissesse que não sabe o que levou você até esse momento, sentado no meio fio em frente a sua casa, sozinho. Recapitulando as últimas horas, você não sabe dizer quando realmente as coisas começaram a dar errado. Será que foi quando confundiu os nomes das pessoas com quem ia sair? Os presentes entregues errado? O restaurante repetido? Ou todos terem descoberto seu planejamento (quase) inexistente? Infelizmente, não há nada que você possa fazer no momento."
+  },
+  {
+    "final": "FelizesParaSempre",
+    "titulo": "Felizes para sempre",
+    "texto": "Depois de tantos dias de conversas, encontros e algumas mensagens às duas da manhã, chegou o Dia dos Namorados... e você não está mais sozinho. O app pergunta se você deseja desativar sua conta. Você sorri, olha para o lado e aperta SIM. Parabéns, {apelido}: você encontrou alguém de verdade no Let's Date!"
+  }
+]

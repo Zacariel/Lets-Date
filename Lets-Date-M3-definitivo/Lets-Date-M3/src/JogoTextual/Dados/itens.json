@@ -1,0 +1,17 @@
+// Itens da loja.
+// categoria: "Presente" (entregue na fase de encontro) ou "Consumivel" (tem um efeito).
+// efeito (só consumíveis): "Coragem" (menu ou conversa), "Interesse" (conversa, 1 vez por conversa)
+//                          ou "Satisfacao" (fase de encontro).
+[
+  { "id": "chocolates",     "nome": "Chocolates",          "categoria": "Presente", "preco": 12, "descricao": "Caixa de bombons sortidos." },
+  { "id": "flores",         "nome": "Flores",              "categoria": "Presente", "preco": 15, "descricao": "Buquê de flores do campo." },
+  { "id": "vinho",          "nome": "Vinho",               "categoria": "Presente", "preco": 25, "descricao": "Um tinto suave, safra recente." },
+  { "id": "livro",          "nome": "Livro",               "categoria": "Presente", "preco": 20, "descricao": "Romance clássico em capa dura." },
+  { "id": "pelucia",        "nome": "Pelúcia",             "categoria": "Presente", "preco": 10, "descricao": "Um ursinho segurando um coração." },
+  { "id": "ingressos-show", "nome": "Ingressos de show",   "categoria": "Presente", "preco": 30, "descricao": "Dois ingressos para a banda do momento." },
+  { "id": "jogo-tabuleiro", "nome": "Jogo de tabuleiro",   "categoria": "Presente", "preco": 22, "descricao": "Um jogo cooperativo para jogar a dois." },
+
+  { "id": "energetico", "nome": "Energético da Coragem", "categoria": "Consumivel", "preco": 8,  "efeito": "Coragem",    "valorEfeito": 50, "descricao": "Recupera 50 de coragem." },
+  { "id": "super-like", "nome": "Super Like",            "categoria": "Consumivel", "preco": 10, "efeito": "Interesse",  "valorEfeito": 15, "descricao": "+15 de interesse na conversa atual (uma vez por conversa)." },
+  { "id": "perfume",    "nome": "Perfume Importado",     "categoria": "Consumivel", "preco": 18, "efeito": "Satisfacao", "valorEfeito": 10, "descricao": "+10 de satisfação em um encontro." }
+]

@@ -1,0 +1,18 @@
+// Notificações do celular. Ao voltar de uma conversa, há 50% de chance de chegar uma.
+// tipo: "Dinheiro" (valor em R$, pode ser negativo), "Coragem" (pode ser negativo),
+//       "Cupom" (desconto em % na próxima compra), "Dica" (revela uma preferência de
+//       alguém com encontro marcado) ou "Nada".
+// Use {apelido} para chamar o jogador pelo apelido.
+[
+  { "id": "pix-tia",       "remetente": "Tia Cida",         "tipo": "Dinheiro", "valor": 20, "mensagem": "Oi {apelido}! Mandei um Pix pra você comprar um mimo pro seu par. Juízo!" },
+  { "id": "bolso",         "remetente": "Você mesmo",       "tipo": "Dinheiro", "valor": 10, "mensagem": "Você enfiou a mão no bolso da jaqueta e achou uma nota amassada." },
+  { "id": "uber",          "remetente": "App de corrida",   "tipo": "Dinheiro", "valor": -8, "mensagem": "Sua corrida de ontem teve taxa de cancelamento. Que azar!" },
+  { "id": "audio-amigo",   "remetente": "Melhor amigo",     "tipo": "Coragem",  "valor": 25, "mensagem": "Áudio de 3 minutos: \"Vai lá, {apelido}! Você é demais!\"" },
+  { "id": "autoajuda",     "remetente": "Rede social",      "tipo": "Coragem",  "valor": 15, "mensagem": "Um vídeo motivacional apareceu no seu feed. Você se sente invencível." },
+  { "id": "bateria",       "remetente": "Sistema",          "tipo": "Coragem",  "valor": -10, "mensagem": "Bateria em 5%. Bate aquele desespero." },
+  { "id": "cupom-app",     "remetente": "Let's Date!",      "tipo": "Cupom",    "valor": 20, "mensagem": "Cupom LETSLOVE liberado: 20% de desconto na sua próxima compra!" },
+  { "id": "cupom-floricultura", "remetente": "Floricultura", "tipo": "Cupom",   "valor": 30, "mensagem": "Promoção relâmpago de dia dos namorados: 30% na próxima compra!" },
+  { "id": "fofoca",        "remetente": "Amiga fofoqueira", "tipo": "Dica",     "valor": 0,  "mensagem": "Menina, eu conheço quem você vai encontrar hoje! Deixa eu te contar uma coisa..." },
+  { "id": "story",         "remetente": "Stories",          "tipo": "Dica",     "valor": 0,  "mensagem": "Alguém com quem você marcou um encontro acabou de postar um story..." },
+  { "id": "premium",       "remetente": "Let's Date!",      "tipo": "Nada",     "valor": 0,  "mensagem": "Seja Premium e tenha likes ilimitados! (você ignora a notificação)" }
+]
