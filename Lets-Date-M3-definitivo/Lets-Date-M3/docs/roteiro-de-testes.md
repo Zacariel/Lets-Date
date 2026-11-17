@@ -11,6 +11,8 @@ dotnet run --project src/JogoTextual
 
 Para começar do zero, apague o arquivo `save_letsdate.json` da pasta de saída (`src/JogoTextual/bin/Debug/net9.0/`) ou escolha "Criar um perfil novo" no Login.
 
+Isso não é obrigatório, porem evita erros futuros
+
 ## Cenários da devolutiva da M2
 
 | # | Situação | Ação | Resultado esperado |
