@@ -1,0 +1,17 @@
+# Saídas de compilação
+bin/
+obj/
+out/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+*.user
+*.suo
+
+# Save local do jogo
+save_letsdate.json
+save_letsdate.json.bak
+
+# Resultados de testes
+TestResults/

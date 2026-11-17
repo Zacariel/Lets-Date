@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{243B658B-DE59-4345-8B89-86DAA086DEDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoTextual", "src\JogoTextual\JogoTextual.csproj", "{D3FD49E1-A7DB-49C6-9674-57829341908B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FA11CF0C-4963-4274-967B-5D72CA505239}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoTextual.Tests", "tests\JogoTextual.Tests\JogoTextual.Tests.csproj", "{892F0104-2861-44CF-AA13-7A0183DBC3C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3FD49E1-A7DB-49C6-9674-57829341908B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3FD49E1-A7DB-49C6-9674-57829341908B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3FD49E1-A7DB-49C6-9674-57829341908B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3FD49E1-A7DB-49C6-9674-57829341908B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892F0104-2861-44CF-AA13-7A0183DBC3C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892F0104-2861-44CF-AA13-7A0183DBC3C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892F0104-2861-44CF-AA13-7A0183DBC3C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892F0104-2861-44CF-AA13-7A0183DBC3C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D3FD49E1-A7DB-49C6-9674-57829341908B} = {243B658B-DE59-4345-8B89-86DAA086DEDF}
+		{892F0104-2861-44CF-AA13-7A0183DBC3C9} = {FA11CF0C-4963-4274-967B-5D72CA505239}
+	EndGlobalSection
+EndGlobal
