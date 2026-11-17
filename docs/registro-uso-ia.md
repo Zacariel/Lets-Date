@@ -10,7 +10,6 @@ Até a entrega da M2, a equipe declara que nenhuma ferramenta de IA generativa f
 
 | Ferramenta | Quem usou | Para quê | O que a equipe fez com o resultado |
 |---|---|---|---|
-| Claude (Anthropic) | Lucas Gonçalves | Reestruturar o código em pastas (Domínio, Dados, Regras, Telas, Interface, Persistência), trocar o texto livre das telas por `enum`, corrigir a validação das entradas e a regra da conversa extra, implementar loja, inventário, notificações e descontos, escrever os testes xUnit e a documentação técnica. | *(descrevam: o que revisaram, testaram e alteraram)* |
-| Claude (Anthropic) | Lucas Gonçalves | Escrever o segundo tópico de conversa das personagens originais e os quatro NPCs novos (Davi, Thiago, Rafael e Bruno), além de flertes e notificações. | *(descrevam: o que revisaram ou reescreveram)* |
+| Claude (Anthropic) | Lucas Gonçalves | Escrever o segundo tópico de conversa das personagens originais e os quatro NPCs novos (Davi, Thiago, Rafael e Bruno), além de flertes e notificações. tudo temporario para ser substituido por outro membro depois com personagens reais | *(descrevam: o que revisaram ou reescreveram)* |
 
-O conceito do jogo, as regras do documento, as quatro personagens originais, seus primeiros diálogos e os textos dos seis finais são da equipe (M1 e M2).
+O conceito do jogo, as regras do documento, os personagens originais e tudo o resto são da equipe, ia foi apenas usada para placeholder que posteriormente deve ser substituido.
