@@ -1,6 +1,6 @@
 # Registro de uso de Inteligência Artificial generativa
 
-> **Equipe: revisar e completar este registro antes da entrega.** Ele precisa descrever com honestidade como a IA foi usada. Se alguém do grupo usou outra ferramenta ou fez outro uso, acrescentem aqui. (até agora eu não usei, mas vou deixar aqui)
+> **Equipe: revisar e completar este registro antes da entrega.** (até agora eu não usei, mas vou deixar aqui, obs: se não me engano o professor deixou um textinho pronto só pra completar)
 
 ## M1 e M2
 
