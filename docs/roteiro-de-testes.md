@@ -1,8 +1,8 @@
 # Roteiro de testes manuais
 
-Use estes casos para conferir o jogo antes da entrega e para gravar a demonstração. Os testes automáticos (`dotnet test`) cobrem as mesmas regras.
+Usar estes casos para conferir o jogo antes da entrega e para gravar a demonstração. Os testes automáticos (`dotnet test`) cobrem as mesmas regras.
 
-Para repetir uma partida igual, rode com uma semente fixa:
+Para repetir uma partida igual, rodar com uma semente fixa:
 
 ```powershell
 $env:LETSDATE_SEMENTE = "7"
