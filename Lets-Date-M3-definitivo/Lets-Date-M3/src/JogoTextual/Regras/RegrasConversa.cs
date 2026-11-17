@@ -19,7 +19,7 @@ namespace JogoTextual.Regras
         }
 
         /// NPCs compatíveis com a busca do jogador que ainda não apareceram hoje.
-        /// NOVO: quem já é match fica fora do sorteio (aparece em "Meus matches").
+        /// quem já é match fica fora do sorteio (aparece em "Meus matches").
         public List<Npc> NpcsDisponiveis(EstadoPartida partida, PerfilJogador perfil, Campanha? campanha = null)
         {
             var matches = RegrasRelacionamento.MatchesAtivos(campanha);
@@ -46,7 +46,7 @@ namespace JogoTextual.Regras
             return npc;
         }
 
-        /// NOVO: conversa com alguém que já é match. Gasta uma conversa, mas começa com mais
+        /// conversa com alguém que já é match. Gasta uma conversa, mas começa com mais
         /// interesse e no capítulo da história que corresponde ao nível do relacionamento.
         /// Devolve falso se não houver conversas ou se já falaram hoje.
         public static bool IniciarConversaComMatch(EstadoPartida partida, Relacionamento relacionamento)
@@ -84,7 +84,7 @@ namespace JogoTextual.Regras
         }
 
         /// Próximo assunto da conversa, ou null se os assuntos já acabaram.
-        /// NOVO: usa os assuntos do capítulo da conversa (se o NPC não tiver capítulo, usa os normais).
+        ///usa os assuntos do capítulo da conversa (se o NPC não tiver capítulo, usa os normais).
         public static TopicoDialogo? TopicoAtual(EstadoConversa conversa, Npc npc)
         {
             var topicos = npc.TopicosDoNivel(conversa.Capitulo);
