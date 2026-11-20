@@ -12,8 +12,7 @@ namespace JogoTextual
     {
         public static int Main()
         {
-            Console.OutputEncoding = Encoding.UTF8;
-            Console.InputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.UTF8; //tinha um tutorial que assisti pedindo input mas tava dando erro quando usava acentos, então mudei
 
             var saida = new SaidaConsole();
             var entrada = new EntradaConsole(saida);
