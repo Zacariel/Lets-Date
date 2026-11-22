@@ -138,8 +138,8 @@ namespace JogoTextual.Telas
             c.Saida.Secao("Quanto tempo falta para o Dia dos Namorados?");
             c.Saida.Menu(new[]
             {
-                (1, "Fácil: 2 semanas (dá tempo de conhecer bem alguém)"),
-                (2, "Médio: 1 semana"),
+                (1, "Fácil: 1 semanas (dá tempo de conhecer bem alguém)"),
+                (2, "Médio: 3 dias"),
                 (3, "Difícil: é hoje! (modo clássico)")
             });
 
