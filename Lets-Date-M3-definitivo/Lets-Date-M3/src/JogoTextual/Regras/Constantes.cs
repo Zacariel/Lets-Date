@@ -44,8 +44,8 @@ namespace JogoTextual.Regras
         public const int TamanhoMaximoBiografia = 100;
 
         // Campanha: quantos dias ANTES do Dia dos Namorados cada dificuldade começa
-        public const int DiasAntesFacil = 14;   // 2 semanas
-        public const int DiasAntesMedio = 7;    // 1 semana
+        public const int DiasAntesFacil = 7;    // 1 semanas
+        public const int DiasAntesMedio = 3;    // 3 dias 
         public const int DiasAntesDificil = 0;  // no próprio dia (jogo clássico)
 
         // Relacionamento
