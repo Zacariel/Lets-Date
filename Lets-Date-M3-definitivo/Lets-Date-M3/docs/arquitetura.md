@@ -178,6 +178,6 @@ stateDiagram-v2
     Encerrar --> [*]
 ```
 
-## Por que as regras não usam `Console`
+## Por que as regras não usam `Random`
 
 As classes da pasta `Regras` recebem e devolvem dados (`ResultadoConvite`, `ResultadoCompraConversa`...). As telas decidem o que escrever a partir desses resultados. Assim os testes conseguem conferir as regras sem simular o teclado, e o sorteio pode ser controlado com `IAleatorio` (nos testes, `AleatorioFixo` escolhe o resultado do D20 e do convite).
